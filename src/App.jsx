@@ -49,7 +49,7 @@ const App = () => {
       <h1>Burger Stacker</h1>
       <section>
         <IngredientList addToBurger = {addToBurger} availableIngredients = {availableIngredients} />  
-        <BurgerStack removeFromBurger = {removeFromBurger} burgerStack = {burgerStack} />
+        <BurgerStack removeFromBurger = {removeFromBurger} burgerStack = {burgerStack} availableIngredients = {availableIngredients}/>
       </section>
     </main>
   );
