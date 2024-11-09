@@ -1,14 +1,16 @@
 // `src/components/BurgerStack.jsx`
- 
+import '../App.css';
+
 const BurgerStack = (props) => {
     return (
         <ul>
           {props.burgerStack.map((burgerStackItem, index) => {
-            //inline style
-           
-            // console.log(availableIngredients.find(burgerStackItem))
+           //inline style
+           const listStyle = {
+            backgroundColor: burgerStackItem.color
+          }
 
-            return(<li key={index} >{burgerStackItem} <button onClick={(_e) => props.removeFromBurger(burgerStackItem)}>❌</button> </li> );
+            return(<li key={index} style={listStyle}>{burgerStackItem.name} <button onClick={(_e) => props.removeFromBurger(burgerStackItem)}>❌</button> </li> );
           })}
         </ul>
       );

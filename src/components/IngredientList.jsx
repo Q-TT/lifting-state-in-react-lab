@@ -1,5 +1,5 @@
 // src/components/IngredientList.jsx
-
+import '../App.css';
 const IngredientList = (props) => {
 
     return (
@@ -10,7 +10,7 @@ const IngredientList = (props) => {
               backgroundColor: availableIngredient.color
             }
             
-            return (<li key={index} style={listStyle}> {availableIngredient.name} <button onClick={(_e) => props.addToBurger(availableIngredient.name)}>➕</button></li>);
+            return (<li key={index} style={listStyle}> {availableIngredient.name} <button onClick={(_e) => props.addToBurger(availableIngredient)}>➕</button></li>);
           })}
         </ul>
       );
